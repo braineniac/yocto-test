@@ -1,0 +1,13 @@
+header:
+  version: 20
+machine: beaglebone-yocto
+distro: poky
+target: core-image-sato
+repos:
+  poky:
+    url: "https://git.yoctoproject.org/git/poky"
+    commit: 7e8674996b0164b07e56bc066d0fba790e627061
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:

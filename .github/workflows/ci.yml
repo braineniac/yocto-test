@@ -1,0 +1,15 @@
+name: Test Yocto build
+
+on:
+  - push
+  - workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/siemens/kas/kas:latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: |
+          kas build test-build.yml
