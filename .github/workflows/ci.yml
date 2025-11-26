@@ -7,10 +7,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/siemens/kas/kas:5.0
-      options: --user root
     steps:
       - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
       - run: |
-          kas build test-build.yml
+          pip install kas
+      - run: |
+          kas-container build test-build.yml
