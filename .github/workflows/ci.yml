@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/siemens/kas/kas:5.0
+      options: --user root
     steps:
       - uses: actions/checkout@v5
       - run: |
